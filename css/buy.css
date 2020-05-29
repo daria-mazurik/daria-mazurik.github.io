@@ -1,0 +1,167 @@
+#buy .container {
+    width:100%;
+    margin: auto;
+    max-width: 1440px;
+}
+
+.slider {
+    padding: 60px;
+}
+
+.slider .item img {
+    /* Для заповнення ілюстрацією батьківського контейнера   */
+    /* Застосовуємо власт. object-fit  */
+    display: block;
+    object-fit: contain;
+    object-position: right;
+    max-width: 100%;
+    height: 100%;
+/*    width:100%;*/
+/*    width: auto;*/
+/*    max-height: 85vh;*/
+}
+
+/* Якщо потрібно інакше позиціонувати ілюстрацію */
+/* (стосується в першу чергу телефонів) */
+/* додавайте додатковий клас в html */
+/* і описуйте в css інакше позиціонування */
+.slider .item.pos-bottom img {
+    object-position: center bottom;
+}
+.slider .item.pos-left img {
+    object-position: left center;
+}
+
+.slider .item {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    width:100%;
+}
+
+.product-img {
+    max-width: 50%;
+    flex-basis: 40%;
+    height: 70vh;
+}
+
+.product-info {
+    width: 50%;
+    padding-left: 50px;
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.product-info > * {
+    width: 100%;
+    max-width: 350px;
+}
+
+.product-info h2 {
+    margin-top: 1.5em;
+    margin-bottom: .25em;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #555;
+}
+
+.product-info h3 {
+    font-size: 1.25rem;   
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #d2d2d2;
+    letter-spacing: 0.2em;
+    margin-bottom: .5em;
+    transform: translateX(-1.5em);
+}
+
+.product-info p {
+    color: #8d8d8d;
+    line-height: 1.7em;
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-bottom: 1.25em;
+}
+
+.product-price-btn {
+    position: relative;
+}
+
+.product-price-btn p {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: lighter;
+    color: #555;
+}
+
+span {
+    display: inline-block;
+    font-size: 1rem;
+    padding-left:.25em;
+}
+
+.product-price-btn button {
+    display: inline-block;
+    margin-left: 20px;
+    transform: translateY(-5px);
+    height: 40px;
+    padding: 0 25px;
+    border: transparent;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+    background-color: #A5A5A5;
+    cursor: pointer;
+    outline: none;
+}
+
+.product-price-btn button:hover {
+    background-color: #5E5E5E;
+}
+
+@media screen and (orientation:portrait) {
+
+    .slider {
+        padding: 25px;
+    }
+    .slider .item {
+        
+    }
+    
+    .slider .item img {
+        object-position: center;
+    }
+
+    .product-img,
+    .product-info {
+        width: 100%;
+        max-width: 100%;
+        flex-basis: 100%;
+        padding: 0;
+    }
+    
+    .product-info {
+        align-items: center;
+    }
+    
+    .product-img {
+        height: 40vh;
+    }
+    
+    .product-info h2 {
+        margin-top: .5em;
+    }
+    .product-info h3 {
+        transform: none;
+    }
+}

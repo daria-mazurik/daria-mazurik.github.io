@@ -1,0 +1,39 @@
+#contact {
+    background-color: #ddd;
+    padding: 60px 25px;
+}
+
+/* HOVER COLOR */
+
+a svg:hover #facebook,
+a svg:hover #instagram {
+    fill: #111;
+    color: darkgray;
+}
+
+/* GENERAL STYLES */
+
+article {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+a {
+    outline: none;
+    border: 0;
+    text-decoration: none;
+}
+
+a svg #facebook,
+a svg #instagram {
+    transition: 200ms;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 200ms;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+
+#contact svg path {
+    fill: #999;
+}
